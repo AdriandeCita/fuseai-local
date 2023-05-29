@@ -1,0 +1,16 @@
+version: "3.7"
+
+services:
+  fuseai-local:
+    image: bitswired/ai-chat-app:single-user-latest
+    volumes:
+      - ./data:/app/prisma/data
+    environment:
+      - DATABASE_URL=file:./data/db.sqlite
+      - NEXTAUTH_SECRET=${JWT_KEY}
+      - NEXTAUTH_URL=http://localhost:3030/
+      - ADMIN_EMAIL=${ADMIN_EMAIL}
+      - ADMIN_PASSWORD=${ADMIN_PASSWORD}
+    ports:
+      - '3030:3000'
+    restart: unless-stopped

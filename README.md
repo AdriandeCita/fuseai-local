@@ -1,6 +1,11 @@
 # FuseAI local setup
 
-This is a Docker Compose setup for running [FuseAI project](https://github.com/bitswired/fuseai) locally. This setup is made for purely local/personal use, and it may not support multi-user setup
+This is a Docker Compose setup for running [FuseAI project](https://github.com/bitswired/fuseai). This setup is made for purely local/personal use, and it may not support multi-user setup.
+
+## Why
+
+- "Setup once and forget", especially helpful if you're not fluent in docker.
+- Database is stored on host system, and does not depend on persistence of the container itself.
 
 ## HowTo
 
